@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>G3X24 Ultra Staking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.5/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>G3X24 Ultra Staking Portal</h1>
+
+        <button id="connectButton" onclick="connect()">Connect Wallet</button>
+        <p>Wallet: <span id="walletAddress">Not connected</span></p>
+
+        <input type="number" id="amountInput" placeholder="Amount to stake (G3X)">
+        <select id="tierSelect">
+            <option value="90">90 Days</option>
+            <option value="180">180 Days</option>
+            <option value="270">270 Days</option>
+            <option value="365">365 Days</option>
+        </select>
+
+        <button onclick="approve()">Approve</button>
+        <button onclick="stake()">Stake</button>
+
+        <h3>Manage Stake</h3>
+        <input type="number" id="stakeIndexInput" placeholder="Stake Index">
+        <button onclick="claim()">Claim Reward</button>
+        <button onclick="unstake()">Unstake</button>
+    </div>
+
+    <script src="abi.js"></script>
+    <script src="ultra.js"></script>
+</body>
+</html>
